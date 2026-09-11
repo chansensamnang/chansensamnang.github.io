@@ -3,321 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- === GOOGLE SEO METADATA === -->
-    <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
-    <meta name="description" content="Official professional portfolio of Chan Sensamnang, IT Manager and Senior IT Lecturer with over 15 years of expert experience in Enterprise Network Infrastructure, Firewall Security Architecture, and Cybersecurity frameworks.">
-    <meta name="keywords" content="Chan Sensamnang, ចាន់ សែនសំណាង, IT Manager, IT Lecturer, Bachelor in IT, Master in IT, MikroTik RouterOS, Network Security, Cybersecurity, Cambodia, IT Expert since 2010">
-    <meta name="author" content="Chan Sensamnang">
-
-    <!-- Open Graph / Social Media Share Tags (Facebook / Telegram) -->
-    <meta property="og:title" content="Chan Sensamnang | IT Manager & Senior IT Lecturer">
-    <meta property="og:description" content="Official executive profile of Chan Sensamnang, IT Manager & Senior IT Lecturer. Expert in Network Infrastructure & Cybersecurity.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://github.io">
-
-    <!-- === GOOGLE SCHEMA MARKUP (JSON-LD) === -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chan Sensamnang",
-      "alternateName": "ចាន់ សែនសំណាង",
-      "jobTitle": "IT Manager & Senior IT Lecturer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "University & Corporate Enterprise in Cambodia"
-      },
-      "alumniOf": [
-        { "@type": "EducationalOrganization", "name": "Bachelor of Science in Information Technology" },
-        { "@type": "EducationalOrganization", "name": "Master of Science in Information Technology" }
-      ],
-      "url": "https://github.io",
-      "sameAs": ["https://t.me"],
-      "knowsAbout": ["Information Technology Management", "Computer Networking", "MikroTik Routing", "Firewall Security Architecture", "Network Infrastructure Integration", "Cybersecurity Systems", "Enterprise Data Protection"]
-    }
-    </script>
-
+    <title>Chan Sensamnang | IT Manager</title>
     <style>
         :root {
-            --nh-black: #0b0f19;       /* Namhay Main Deep Black Background */
-            --nh-dark: #111827;        /* Namhay Dark Gray Block Content */
-            --nh-gold: #f59e0b;        /* Namhay Vibrant Gold Accent */
+            --nh-black: #0b0f19;
+            --nh-dark: #111827;
+            --nh-gold: #f59e0b;
             --text-white: #ffffff;
             --text-gray: #94a3b8;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--nh-black); color: var(--text-white); line-height: 1.6; }
+        
+        /* NAVBAR */
+        .nh-navbar { background-color: var(--nh-dark); padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nh-logo { font-size: 1.5rem; font-weight: 800; color: var(--text-white); text-decoration: none; text-transform: uppercase; }
+        .nh-logo span { color: var(--nh-gold); }
+        .nh-nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+        .nh-nav-links a { text-decoration: none; color: var(--text-gray); font-weight: 500; font-size: 0.95rem; }
+        .btn-hire-me { background-color: var(--nh-gold); color: var(--nh-black) !important; padding: 8px 20px; border-radius: 50px; font-weight: 700; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--nh-black);
-            color: var(--text-white);
-            line-height: 1.6;
-        }
+        /* HERO SECTION */
+        .nh-hero-section { max-width: 1200px; margin: 50px auto; padding: 0 40px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; align-items: center; }
+        .hero-welcome-tag { color: var(--nh-gold); font-size: 1.1rem; font-weight: 600; text-transform: uppercase; margin-bottom: 10px; }
+        .hero-name-heading { font-size: 3.2rem; font-weight: 800; margin-bottom: 15px; }
+        .hero-role-heading { font-size: 1.5rem; color: var(--nh-gold); font-weight: 600; margin-bottom: 20px; }
+        .hero-bio-p { font-size: 1.05rem; color: var(--text-gray); margin-bottom: 35px; text-align: justify; }
 
-        /* 1. NAMHAY STYLE TOP NAVIGATION BAR */
-        .nh-navbar {
-            background-color: rgba(11, 15, 25, 0.9);
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
+        /* PICTURE UI FRAME */
+        .hero-right-photo-wrap { display: flex; justify-content: center; }
+        .nh-photo-frame { width: 100%; max-width: 340px; background-color: var(--nh-dark); border-radius: 20px; padding: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); }
+        .inner-img-box { width: 100%; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; background-color: var(--nh-black); }
+        .inner-img-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        .nh-logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-white);
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
+        /* RESUME SECTIONS */
+        .nh-experience-section { background-color: var(--nh-dark); padding: 60px 0; margin-top: 50px; }
+        .section-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        .block-main-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 35px; border-left: 4px solid var(--nh-gold); padding-left: 15px; }
+        .grid-split-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .info-category-title { font-size: 1.3rem; font-weight: 700; color: var(--nh-gold); margin-bottom: 20px; text-transform: uppercase; }
+        .nh-data-card { background-color: var(--nh-black); padding: 25px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.03); margin-bottom: 20px; }
+        .card-time-badge { color: var(--nh-gold); font-size: 0.85rem; font-weight: 700; margin-bottom: 5px; }
+        .card-main-title { font-size: 1.15rem; font-weight: 700; color: var(--text-white); }
+        .card-sub-title { font-size: 0.95rem; color: var(--nh-gold); margin-bottom: 10px; }
+        .card-description-p { font-size: 0.92rem; color: var(--text-gray); text-align: justify; }
 
-        .nh-logo span {
-            color: var(--nh-gold);
-        }
+        footer { text-align: center; padding: 30px 20px; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px; color: var(--text-gray); }
+        @media (max-width: 900px) { .nh-navbar { flex-direction: column; gap: 15px; } .nh-hero-section { grid-template-columns: 1fr; text-align: center; } .hero-bio-p { text-align: center; } .hero-right-photo-wrap { grid-row: 1; } .grid-split-blocks { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
 
-        .nh-nav-links {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-            align-items: center;
-        }
+    <nav class="nh-navbar">
+        <a href="#" class="nh-logo">Chan <span>Sensamnang</span></a>
+        <ul class="nh-nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="https://t.me" class="btn-hire-me" target="_blank">Hire me</a></li>
+        </ul>
+    </nav>
 
-        .nh-nav-links a {
-            text-decoration: none;
-            color: var(--text-gray);
-            font-weight: 500;
-            font-size: 0.95rem;
-            text-transform: capitalize;
-            transition: color 0.2s ease;
-        }
+    <section class="nh-hero-section">
+        <div class="hero-left-details">
+            <div class="hero-welcome-tag">Hello I'm</div>
+            <h1 class="hero-name-heading">Chan Sensamnang</h1>
+            <div class="hero-role-heading">IT Manager & Senior Academic Consultant</div>
+            <p class="hero-bio-p">
+                My name is Chan Sensamnang, and I have been deeply passionate about information technology infrastructure and computer networks since 2010. Over the years, I have honed my expert technical capabilities in architecture planning, complex router administration, and stateful WinBox firewall optimizations, specializing in enterprise-grade Network Infrastructure and localized Cybersecurity management.
+            </p>
+        </div>
 
-        .nh-nav-links a:hover {
-            color: var(--text-white);
-        }
+        <div class="hero-right-photo-wrap">
+            <div class="nh-photo-frame">
+                <div class="inner-img-box">
+                    <img src="profile.PNG" alt="Chan Sensamnang Profile Picture">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .btn-hire-me {
-            background-color: var(--nh-gold);
-            color: var(--nh-black) !important;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 700 !important;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
+    <section class="nh-experience-section">
+        <div class="section-wrapper">
+            <h2 class="block-main-title">My Technical Resume</h2>
+            
+            <div class="grid-split-blocks">
+                <div>
+                    <h3 class="info-category-title">Working Experience</h3>
+                    <div class="nh-data-card">
+                        <div class="card-time-badge">2024 - PRESENT</div>
+                        <div class="card-main-title">IT Manager</div>
+                        <div class="card-sub-title">Corporate Network Infrastructure</div>
+                        <div class="card-description-p">Directing enterprise technical workflows, governing server infrastructure stability, ensuring data sovereignty across multi-campus layouts, and leading enterprise cybersecurity policy planning to immunize digital assets.</div>
+                    </div>
+                    <div class="nh-data-card">
+                        <div class="card-time-badge">2010 - PRESENT</div>
+                        <div class="card-main-title">Senior IT Lecturer</div>
+                        <div class="card-sub-title">Higher Education University</div>
+                        <div class="card-description-p">Lecturing and training higher education university students on Computer Networks, Cybersecurity paradigms, Layer 2/3 Routing Protocols, and active firewalls configurations to bridge academic curriculum with industry requirements.</div>
+                    </div>
+                </div>
 
-        .btn-hire-me:hover {
-            background-color: #d97706;
-            transform: translateY(-2px);
-        }
+                <div>
+                    <h3 class="info-category-title">Education Background</h3>
+                    <div class="nh-data-card">
+                        <div class="card-time-badge">M.Sc. IT Graduate</div>
+                        <div class="card-main-title">Master of Science in Information Technology</div>
+                        <div class="card-sub-title">Postgraduate Specialization Degree</div>
+                        <div class="card-description-p">Advanced graduate specialization focusing on Enterprise Systems Architecture, Advanced Computing Science, and System Network Security Frameworks.</div>
+                    </div>
+                    <div class="nh-data-card">
+                        <div class="card-time-badge">B.Sc. IT Graduate</div>
+                        <div class="card-main-title">Bachelor of Science in Information Technology</div>
+                        <div class="card-sub-title">Undergraduate Specialization Degree</div>
+                        <div class="card-description-p">Undergraduate degree specializing in Computer Networking Systems, Database Management Architecture, and Systems Engineering.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        /* 2. SPLIT HERO LAYOUT CONTAINER */
-        .nh-hero-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
-        }
+    <footer>
+        &copy; 2026 Chan Sensamnang. All rights reserved. | Inspired by Namhay Theme
+    </footer>
 
-        .hero-left-details {
-            padding-right: 20px;
-        }
-
-        .hero-welcome-tag {
-            color: var(--nh-gold);
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .hero-name-heading {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 15px;
-            letter-spacing: -1px;
-        }
-
-        .hero-role-heading {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--nh-gold);
-            margin-bottom: 25px;
-        }
-
-        .hero-bio-p {
-            font-size: 1.05rem;
-            color: var(--text-gray);
-            margin-bottom: 40px;
-            text-align: justify;
-            line-height: 1.7;
-        }
-
-        /* ACTIONS BUTTONS UX BLOCK */
-        .hero-actions-wrap {
-            display: flex;
-            gap: 20px;
-        }
-
-        .btn-nh-primary {
-            display: inline-block;
-            background-color: var(--nh-gold);
-            color: var(--nh-black);
-            padding: 14px 32px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border-radius: 6px;
-            transition: all 0.25s ease;
-        }
-
-        .btn-nh-primary:hover {
-            background-color: #d97706;
-            transform: translateY(-3px);
-        }
-
-        .btn-nh-secondary {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--text-white);
-            padding: 14px 32px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border-radius: 6px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.25s ease;
-        }
-
-        .btn-nh-secondary:hover {
-            border-color: var(--nh-gold);
-            color: var(--nh-gold);
-            transform: translateY(-3px);
-        }
-
-        /* PROPORTION-CONTROLLED IMAGE BLOCK (UX FIXED: ទំហំល្មមស្អាត) */
-        .hero-right-photo-wrap {
-            display: flex;
-            justify-content: center;
-        }
-
-        .nh-photo-frame {
-            width: 100%;
-            max-width: 350px; /* Perfectly scaled to mirror namhay.com */
-            background-color: var(--nh-dark);
-            border-radius: 20px;
-            padding: 15px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .nh-photo-frame:hover {
-            transform: scale(1.02);
-        }
-
-        .inner-img-box {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: var(--nh-black);
-        }
-
-        .inner-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* 3. MODULAR GRID SECTIONS */
-        .nh-experience-section {
-            background-color: var(--nh-dark);
-            padding: 80px 0;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .section-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .block-main-title {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 40px;
-            letter-spacing: -0.5px;
-            border-left: 4px solid var(--nh-gold);
-            padding-left: 15px;
-        }
-
-        .grid-split-blocks {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .info-category-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--nh-gold);
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .nh-data-card {
-            background-color: var(--nh-black);
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            margin-bottom: 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .nh-data-card:hover {
-            transform: translateX(5px);
-        }
-
-        .card-time-badge {
-            display: inline-block;
-            color: var(--nh-gold);
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-        }
-
-        .card-main-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-white);
-        }
-
-        .card-sub-title {
-            font-size: 0.95rem;
-            color: var(--nh-gold);
-            font-weight: 500;
-            margin-bottom: 12px;
-        }
-
-        .card-description-p {
-            font-size: 0.92rem;
-            color: var(--text-gray);
-            text-align: justify;
-            line-height: 1.6;
-        }
-
-        /* GLOBAL FOOTER ARCHITECTURE */
+</body>
+</html>
