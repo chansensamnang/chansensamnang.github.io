@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === GOOGLE SEO METADATA === -->
     <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
+    <meta name="description" content="Official professional portfolio of Chan Sensamnang, IT Manager and Senior IT Lecturer with over 15 years of expert experience in Enterprise Network Infrastructure, Firewall Security Architecture, and Cybersecurity frameworks.">
+    <meta name="keywords" content="Chan Sensamnang, ចាន់ សែនសំណាង, IT Manager, IT Lecturer, Bachelor in IT, Master in IT, MikroTik RouterOS, Network Security, Cybersecurity, Cambodia, IT Expert since 2010">
+    <meta name="author" content="Chan Sensamnang">
+
+    <!-- Open Graph / Social Media Share Tags (Facebook / Telegram) -->
+    <meta property="og:title" content="Chan Sensamnang | IT Manager & Senior IT Lecturer">
+    <meta property="og:description" content="Official executive profile of Chan Sensamnang, IT Manager & Senior IT Lecturer. Expert in Network Infrastructure & Cybersecurity.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://github.io">
+
+    <!-- === GOOGLE SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chan Sensamnang",
+      "alternateName": "ចាន់ សែនសំណាង",
+      "jobTitle": "IT Manager & Senior IT Lecturer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "University & Corporate Enterprise in Cambodia"
+      },
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "Bachelor of Science in Information Technology" },
+        { "@type": "EducationalOrganization", "name": "Master of Science in Information Technology" }
+      ],
+      "url": "https://github.io",
+      "sameAs": ["https://t.me"],
+      "knowsAbout": ["Information Technology Management", "Computer Networking", "MikroTik Routing", "Firewall Security Architecture", "Network Infrastructure Integration", "Cybersecurity Systems", "Enterprise Data Protection"]
+    }
+    </script>
     
     <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://googleapis.com" rel="stylesheet">
@@ -11,8 +44,8 @@
 
     <style>
         :root {
-            --smm-blue: #1e3a8a;       /* Deep Trust Blue */
-            --smm-amber: #f59e0b;      /* SMM Vibrant Amber/Yellow */
+            --smm-blue: #0b2545;       /* SMM Deep Blue */
+            --smm-amber: #f59e0b;      /* SMM Vibrant Amber Accent */
             --smm-bg: #ffffff;          /* Clean White Base */
             --smm-gray: #f8fafc;        /* Slate 50 Light Gray Block */
             --text-dark: #0f172a;       /* Slate 900 */
@@ -36,6 +69,9 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .smm-logo {
@@ -118,6 +154,7 @@
             margin-bottom: 35px;
             text-align: justify;
             font-weight: 400;
+            line-height: 1.7;
         }
 
         /* RIGHT AREA: BALANCED PREMIUM IMAGE PROFILE FRAME */
@@ -127,10 +164,9 @@
             align-items: center;
         }
 
-        /* UX FIXED: រៀបចំទំហំរូបភាពឱ្យល្មមស្អាត មិនធំពេកទេ */
         .smm-photo-frame {
             width: 100%;
-            max-width: 360px; /* Constrained for perfect proportion */
+            max-width: 360px; /* Constrained for perfect UX proportion */
             background-color: #ffffff;
             border-radius: 16px;
             padding: 12px;
@@ -139,7 +175,6 @@
             position: relative;
         }
 
-        /* Decorative background element behind photo */
         .smm-photo-frame::before {
             content: '';
             position: absolute;
@@ -282,69 +317,3 @@
         .item-sub {
             font-size: 0.9rem;
             color: var(--smm-blue);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .item-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            text-align: justify;
-        }
-
-        /* PREMIUM SMM CALL TO ACTION BUTTON */
-        .smm-cta-wrap {
-            text-align: center;
-            margin-top: 50px;
-            padding-bottom: 20px;
-        }
-
-        .btn-smm-tg {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: var(--smm-blue);
-            color: #ffffff;
-            padding: 15px 35px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
-            transition: all 0.25s ease;
-        }
-
-        .btn-smm-tg:hover {
-            background-color: var(--smm-amber);
-            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);
-            transform: translateY(-2px);
-        }
-
-        /* GLOBAL FOOTER FRAME */
-        footer {
-            background-color: var(--text-dark);
-            color: #94a3b8;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.85rem;
-            margin-top: 80px;
-            letter-spacing: 0.5px;
-        }
-
-        /* WEB LAYOUT RESPONSIVE ADAPTABILITY */
-        @media (max-width: 1024px) {
-            .smm-hero-section { grid-template-columns: 1fr; text-align: center; margin: 30px auto; }
-            .hero-left-block { padding-right: 0; }
-            .executive-summary { text-align: center; }
-            .hero-right-block { grid-row: 1; }
-            .competencies-grid { grid-template-columns: 1fr; }
-            .timeline-section { grid-template-columns: 1fr; gap: 40px; }
-            .hero-title { font-size: 2.5rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 1. SMM Agency Top Navigation Bar -->
