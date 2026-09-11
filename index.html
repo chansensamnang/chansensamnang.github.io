@@ -3,123 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- === GOOGLE SEO METADATA === -->
     <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
-    <meta name="description" content="Official professional executive portfolio of Chan Sensamnang, IT Manager and Senior IT Lecturer with over 15 years of expert experience in Enterprise Network Infrastructure, Firewall Security Architecture, and Cybersecurity frameworks.">
-    <meta name="keywords" content="Chan Sensamnang, ចាន់ សែនសំណាង, IT Manager, IT Lecturer, Bachelor in IT, Master in IT, MikroTik RouterOS, Network Security, Cybersecurity, Cambodia, IT Expert since 2010">
-    <meta name="author" content="Chan Sensamnang">
-
-    <!-- Open Graph / Social Media Share Tags (Facebook / Telegram) -->
-    <meta property="og:title" content="Chan Sensamnang | IT Manager & Senior IT Lecturer">
-    <meta property="og:description" content="Official executive profile of Chan Sensamnang, IT Manager & Senior IT Lecturer. Expert in Network Infrastructure & Cybersecurity.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://github.io">
-
-    <!-- === GOOGLE SCHEMA MARKUP (JSON-LD) === -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chan Sensamnang",
-      "alternateName": "ចាន់ សែនសំណាង",
-      "jobTitle": "IT Manager & Senior IT Lecturer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "University & Corporate Enterprise in Cambodia"
-      },
-      "alumniOf": [
-        { "@type": "EducationalOrganization", "name": "Bachelor of Science in Information Technology" },
-        { "@type": "EducationalOrganization", "name": "Master of Science in Information Technology" }
-      ],
-      "url": "https://github.io",
-      "sameAs": ["https://t.me"],
-      "knowsAbout": ["Information Technology Management", "Computer Networking", "MikroTik Routing", "Firewall Security Architecture", "Network Infrastructure Integration", "Cybersecurity Systems", "Enterprise Data Protection"]
-    }
-    </script>
-
-    <!-- Google Fonts & FontAwesome Vector Icons -->
+    
+    <!-- Google Fonts & FontAwesome -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
 
     <style>
         :root {
-            --ksi-blue: #0b2545;
-            --ksi-gold: #c5a880;
-            --bg-light: #f4f7f6;
+            --studio-black: #111111;
+            --studio-orange: #d97706; /* Nicepage Accent Orange */
+            --studio-light: #f8fafc;
+            --text-light: #ffffff;
             --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --card-shadow: 0 15px 35px rgba(11, 37, 69, 0.06);
         }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', 'Kantumruy Pro', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-        .ksi-navbar { background-color: #ffffff; border-bottom: 4px solid var(--ksi-blue); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; }
-        .ksi-logo { font-size: 1.5rem; font-weight: 800; color: var(--ksi-blue); letter-spacing: 1px; text-decoration: none; }
-        .ksi-logo span { color: var(--ksi-gold); }
-        .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--ksi-blue); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: color 0.2s ease; }
-        .nav-links a:hover { color: var(--ksi-gold); }
-        .breadcrumbs-banner { background-color: #ffffff; padding: 35px 5%; border-bottom: 1px solid #e2e8f0; }
-        .breadcrumbs-path { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
-        .breadcrumbs-path span { color: var(--ksi-blue); font-weight: 600; }
-        .page-main-title { font-size: 2.2rem; color: var(--ksi-blue); font-weight: 800; letter-spacing: -0.5px; }
-        .main-container { max-width: 1300px; margin: 40px auto; padding: 0 25px; display: grid; grid-template-columns: 320px 1fr; gap: 45px; }
-        .speaker-left-pane { display: flex; flex-direction: column; align-items: center; }
-        .sticky-sidebar-box { position: sticky; top: 110px; width: 100%; text-align: center; }
-        .avatar-box { width: 100%; border: 6px solid #ffffff; box-shadow: var(--card-shadow); margin-bottom: 24px; background: #e2e8f0; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px; transition: transform 0.3s ease; }
-        .avatar-box:hover { transform: translateY(-5px); }
-        .avatar-box img { width: 100%; height: 100%; object-fit: cover; }
-        .speaker-role-tag { font-size: 1.15rem; color: var(--ksi-blue); font-weight: 700; letter-spacing: -0.3px; }
-        .speaker-location-tag { color: var(--ksi-gold); font-size: 0.95rem; font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .speaker-right-pane { background: #ffffff; padding: 45px; border-radius: 12px; box-shadow: var(--card-shadow); border: 1px solid #edf2f7; }
-        .speaker-right-pane h2.bio-section-title { font-size: 1.25rem; color: var(--ksi-blue); border-bottom: 2px solid var(--ksi-gold); padding-bottom: 10px; margin-bottom: 25px; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px; display: flex; align-items: center; gap: 12px; }
-        .speaker-right-pane h2.bio-section-title i { color: var(--ksi-gold); font-size: 1.2rem; }
-        .bio-paragraph { font-size: 1.05rem; color: var(--text-dark); text-align: justify; margin-bottom: 30px; font-weight: 400; }
-        .bio-paragraph.highlighted-summary { font-size: 1.1rem; font-weight: 500; color: var(--ksi-blue); border-left: 4px solid var(--ksi-gold); padding-left: 20px; line-height: 1.7; }
-        .info-card-row { background-color: var(--bg-light); padding: 24px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--ksi-blue); transition: transform 0.25s ease, background-color 0.25s ease; }
-        .info-card-row:hover { transform: translateX(6px); background-color: #ebf1f0; }
-        .info-card-row h4 { color: var(--ksi-blue); font-size: 1.15rem; margin-bottom: 8px; font-weight: 700; letter-spacing: -0.3px; }
-        .info-card-row p { font-size: 0.98rem; color: #475569; text-align: justify; line-height: 1.6; }
-        .time-badge { display: inline-block; background: var(--ksi-blue); color: #ffffff; padding: 3px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 4px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .time-badge.present { background: #16a34a; }
-        .social-connect-box { margin-top: 45px; padding: 28px; border: 2px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-        .social-connect-box h5 { font-size: 1.05rem; color: var(--ksi-blue); font-weight: 700; }
-        .tg-link-btn { background-color: var(--ksi-blue); color: #ffffff; padding: 14px 28px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 6px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(11, 37, 69, 0.15); }
-        .tg-link-btn:hover { background-color: var(--ksi-gold); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(197, 168, 128, 0.35); }
-        footer { background-color: var(--ksi-blue); color: #ffffff; text-align: center; padding: 35px 20px; font-size: 0.85rem; margin-top: 90px; border-top: 4px solid var(--ksi-gold); letter-spacing: 0.5px; }
-        @media (max-width: 1024px) { .main-container { grid-template-columns: 1fr; gap: 40px; } .avatar-box { max-width: 320px; } .sticky-sidebar-box { position: static; } }
-        @media (max-width: 640px) { .ksi-navbar { flex-direction: column; gap: 15px; padding: 20px; } .breadcrumbs-banner { padding: 25px 20px; } .page-main-title { font-size: 1.8rem; } .speaker-right-pane { padding: 25px 20px; } .social-connect-box { flex-direction: column; text-align: center; padding: 20px; } .tg-link-btn { width: 100%; justify-content: center; } }
+
+        body {
+            font-family: 'Poppins', 'Kantumruy Pro', sans-serif;
+            background-color: var(--studio-black);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* NICEPAGE LAYOUT CONTAINER */
+        .studio-section {
+            min-height: 100vh;
+            padding: 80px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* BACKGROUND DECORATIVE LAYERED SHAPES */
+        .shape-orange-block {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 35%;
+            height: 75vh;
+            background-color: var(--studio-orange);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .main-grid {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+            align-items: center;
+        }
+
+        /* LEFT BLOCK: TEXT INFRASTRUCTURE */
+        .text-content-block {
+            padding-right: 20px;
+        }
+
+        .studio-tagline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            color: var(--studio-orange);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .studio-main-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.8rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--text-light);
+        }
+
+        .studio-main-title span {
+            display: block;
+            color: transparent;
+            -webkit-text-stroke: 1px #ffffff;
+        }
+
+        .executive-summary-box {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        /* COMPETENCIES CARDS ROWS */
+        .competency-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+
+        .competency-box:hover {
+            transform: translateX(8px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .competency-box h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: var(--studio-orange);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .competency-box p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* RIGHT BLOCK: PREMIUM LAYERED IMAGE */
+        .image-content-block {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .layered-card-frame {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            padding: 16px 16px 24px 16px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+            transform: rotate(2deg);
+            transition: transform 0.4s ease;
+            border-radius: 4px;
+        }
+
+        .layered-card-frame:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        .inner-photo-wrap {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background-color: #cbd5e1;
+            border-radius: 2px;
+            margin-bottom: 20px;
+        }
+
+        .inner-photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-profile-details {
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        .card-profile-details h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.6rem;
+            color: var(--studio-black);
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .card-profile-details p {
+            font-size: 0.9rem;
+            color: var(--studio-orange);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        /* EXPERIENCE & EDUCATION MINIMALIST GRID */
+        .info-section-grid {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 40px;
+        }
+
+        .info-column h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--studio-orange);
+        }
+
+        .info-item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .info-item-sub {
+            font-size: 0.95rem;
+            color: var(--studio-orange);
+            font-weight: 500;
+            margin: 2px 0 6px 0;
+        }
+
+        .info-item-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-align: justify;
+        }
+
+        /* PREMIUM CTA BUTTON */
+        .studio-cta-wrap {
+            margin-top: 40px;
+        }
+
+        .btn-studio-tg {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            padding: 14px 35px;
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-studio-tg:hover {
+            background-color: var(--studio-orange);
+            border-color: var(--studio-orange);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            color: #64748b;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 80px;
+            letter-spacing: 1px;
+        }
+
+        /* RESPONSIVE LAYOUT MEDIA QUERIES (UX SYSTEM) */
+        @media (max-width: 1024px) {
+            .main-grid { grid-template-columns: 1fr; gap: 50px; }
+            .shape-orange-block { display: none; }
+            .image-content-block { grid-row: 1; }
+            .info-section-grid { grid-template-columns: 1fr; }
+            .studio-main-title { font-size: 3rem; }
+        }
     </style>
 </head>
 <body>
 
-    <nav class="ksi-navbar">
-        <a href="#" class="ksi-logo">CHAN <span>SENSAMNANG</span></a>
-        <ul class="nav-links">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Expertise</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Education</a></li>
-        </ul>
-    </nav>
+    <section class="studio-section">
+        <!-- Nicepage Layered Background block -->
+        <div class="shape-orange-block"></div>
 
-    <div class="breadcrumbs-banner">
-        <div class="breadcrumbs-path">Home / Global Speakers / <span>Chan Sensamnang</span></div>
-        <h1 class="page-main-title">Chan Sensamnang</h1>
-    </div>
-
-    <div class="main-container">
-        <aside class="speaker-left-pane">
-            <div class="sticky-sidebar-box">
-                <div class="avatar-box">
-                    <!-- 💡 ខ្ញុំបានភ្ជាប់លីងរូបភាពផ្លូវការពីប្រព័ន្ធផ្ទាល់ ធានាថាលោតចេញ ១០០% -->
-                    <img src="profile.PNG" onerror="this.onerror=null; this.src='https://unsplash.com';" alt="Chan Sensamnang Corporate Profile">
+        <div class="main-grid">
+            
+            <!-- Left Block: Text Infrastructure Data -->
+            <div class="text-content-block">
+                <div class="studio-tagline">About branding studio</div>
+                <h1 class="studio-main-title">Chan <span>Sensamnang</span></h1>
+                
+                <div class="executive-summary-box">
+                    A visionary IT Executive and Senior Academic Consultant with over 15 years of proven expertise in enterprise-grade Network Infrastructure, Advanced Firewall Architecture, and Information Security Systems. Currently serving as IT Manager, specializing in high-performance network designs, custom MikroTik RouterOS filtering optimizations, and comprehensive cybersecurity frameworks.
                 </div>
-                <div class="speaker-role-tag">IT Manager & Senior Lecturer</div>
-                <div class="speaker-location-tag">Kingdom of Cambodia</div>
-            </div>
-        </aside>
 
-        <main class="speaker-right-pane">
-            <h2 class="bio-section-title"><i class="fa-solid fa-user-tie"></i> Executive Summary</h2>
-            <p class="bio-paragraph highlighted-summary">
+                <!-- Technical Competencies Rows -->
+                <div class="competency-box">
+                    <h4><i class="fa-solid fa-shield-halved"></i> Network Security</h4>
+                    <p>Advanced engineering of stateful firewall structures, custom MikroTik RouterOS rules optimization using FastTrack mechanics to minimize CPU loads, and bandwidth shaping via complex Queue hierarchies.</p>
+                </div>
+
+                <div class="competency-box">
+                    <h4><i class="fa-solid fa-lock"></i> Cybersecurity</h4>
+                    <p>Comprehensive cyber threat mitigation, network traffic vulnerability assessments, localized security logging analysis, and strategic development of anti-ransomware backup systems.</p>
+                </div>
+            </div>
+
