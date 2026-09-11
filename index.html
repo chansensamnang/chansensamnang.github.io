@@ -3,317 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- === GOOGLE SEO METADATA === -->
     <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
-    <meta name="description" content="Official professional portfolio of Chan Sensamnang, IT Manager and Senior IT Lecturer with over 15 years of expert experience in Enterprise Network Infrastructure, Firewall Security Architecture, and Cybersecurity frameworks.">
-    <meta name="keywords" content="Chan Sensamnang, ចាន់ សែនសំណាង, IT Manager, IT Lecturer, Bachelor in IT, Master in IT, MikroTik RouterOS, Network Security, Cybersecurity, Cambodia, IT Expert since 2010">
-    <meta name="author" content="Chan Sensamnang">
-
-    <!-- Open Graph / Social Media Share Tags (Facebook / Telegram) -->
-    <meta property="og:title" content="Chan Sensamnang | IT Manager & Senior IT Lecturer">
-    <meta property="og:description" content="Official executive profile of Chan Sensamnang, IT Manager & Senior IT Lecturer. Expert in Network Infrastructure & Cybersecurity.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://github.io">
-
-    <!-- === GOOGLE SCHEMA MARKUP (JSON-LD) === -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chan Sensamnang",
-      "alternateName": "ចាន់ សែនសំណាង",
-      "jobTitle": "IT Manager & Senior IT Lecturer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "University & Corporate Enterprise in Cambodia"
-      },
-      "alumniOf": [
-        { "@type": "EducationalOrganization", "name": "Bachelor of Science in Information Technology" },
-        { "@type": "EducationalOrganization", "name": "Master of Science in Information Technology" }
-      ],
-      "url": "https://github.io",
-      "sameAs": ["https://t.me"],
-      "knowsAbout": ["Information Technology Management", "Computer Networking", "MikroTik Routing", "Firewall Security Architecture", "Network Infrastructure Integration", "Cybersecurity Systems", "Enterprise Data Protection"]
-    }
-    </script>
-    
-    <!-- Google Fonts & FontAwesome Icons -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
-
     <style>
         :root {
-            --smm-blue: #0b2545;       /* SMM Deep Blue */
-            --smm-amber: #f59e0b;      /* SMM Vibrant Amber Accent */
-            --smm-bg: #ffffff;          /* Clean White Base */
-            --smm-gray: #f8fafc;        /* Slate 50 Light Gray Block */
-            --text-dark: #0f172a;       /* Slate 900 */
-            --text-muted: #475569;      /* Slate 600 */
+            --smm-blue: #0b2545;
+            --smm-amber: #f59e0b;
+            --smm-bg: #ffffff;
+            --smm-gray: #f8fafc;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--smm-bg); color: var(--text-dark); line-height: 1.6; }
+        
+        /* NAVBAR */
+        .smm-navbar { background-color: #ffffff; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
+        .smm-logo { font-size: 1.4rem; font-weight: 800; color: var(--smm-blue); text-transform: uppercase; text-decoration: none; }
+        .smm-logo span { color: var(--smm-amber); }
+        .smm-nav-links { display: flex; gap: 30px; list-style: none; }
+        .smm-nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; }
 
-        body {
-            font-family: 'Montserrat', 'Kantumruy Pro', sans-serif;
-            background-color: var(--smm-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+        /* HERO SECTION */
+        .smm-hero-section { max-width: 1200px; margin: 50px auto; padding: 0 30px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+        .agency-badge { display: inline-block; background-color: #fef3c7; color: #d97706; padding: 6px 14px; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; border-radius: 4px; margin-bottom: 15px; }
+        .hero-title { font-size: 3rem; font-weight: 800; color: var(--smm-blue); margin-bottom: 20px; }
+        .hero-title span { color: var(--smm-amber); }
+        .executive-summary { font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px; text-align: justify; }
 
-        /* SMM AGENCY NAVIGATION BAR */
-        .smm-navbar {
-            background-color: #ffffff;
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        /* CONSTRIANED PICTURE UI FRAME */
+        .hero-right-block { display: flex; justify-content: center; }
+        .smm-photo-frame { width: 100%; max-width: 340px; background-color: #ffffff; border-radius: 14px; padding: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.06); border: 1px solid #edf2f7; }
+        .image-wrapper { width: 100%; aspect-ratio: 1 / 1; border-radius: 8px; overflow: hidden; }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
 
-        .smm-logo {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--smm-blue);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
+        /* COMPETENCIES GRID */
+        .competencies-section { background-color: var(--smm-gray); padding: 50px 0; }
+        .inner-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+        .section-title { font-size: 1.6rem; font-weight: 800; text-transform: uppercase; color: var(--smm-blue); margin-bottom: 30px; }
+        .competencies-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .smm-card { background-color: #ffffff; padding: 25px; border-radius: 10px; border: 1px solid #edf2f7; }
+        .smm-card h4 { font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px; text-transform: uppercase; color: var(--smm-blue); }
+        .smm-card p { font-size: 0.95rem; color: var(--text-muted); text-align: justify; }
 
-        .smm-logo span {
-            color: var(--smm-amber);
-        }
+        /* TIMELINE SECTION */
+        .timeline-section { max-width: 1200px; margin: 60px auto; padding: 0 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .timeline-column h3 { font-size: 1.4rem; font-weight: 800; color: var(--smm-blue); margin-bottom: 25px; text-transform: uppercase; }
+        .timeline-item { background-color: #ffffff; padding: 20px; border-radius: 8px; border-left: 4px solid var(--smm-amber); margin-bottom: 15px; border: 1px solid #f1f5f9; border-left-width: 4px; }
+        .item-date { font-size: 0.8rem; font-weight: 700; color: var(--smm-amber); margin-bottom: 2px; }
+        .item-title { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); }
+        .item-sub { font-size: 0.9rem; color: var(--smm-blue); font-weight: 600; margin-bottom: 8px; }
+        .item-desc { font-size: 0.92rem; color: var(--text-muted); text-align: justify; }
 
-        .smm-nav-links {
-            display: flex;
-            gap: 35px;
-            list-style: none;
-        }
+        /* CTA BUTTON */
+        .smm-cta-wrap { text-align: center; margin: 40px 0; }
+        .btn-smm-tg { display: inline-block; background-color: var(--smm-blue); color: #ffffff; padding: 14px 35px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 50px; text-transform: uppercase; box-shadow: 0 8px 20px rgba(30,58,138,0.15); }
 
-        .smm-nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            transition: color 0.2s ease;
-        }
+        footer { background-color: var(--text-dark); color: #94a3b8; text-align: center; padding: 30px 20px; font-size: 0.85rem; margin-top: 60px; }
+        @media (max-width: 900px) { .smm-hero-section { grid-template-columns: 1fr; text-align: center; } .hero-right-block { grid-row: 1; } .competencies-grid { grid-template-columns: 1fr; } .timeline-section { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
 
-        .smm-nav-links a:hover {
-            color: var(--smm-amber);
-        }
+    <nav class="smm-navbar">
+        <a href="#" class="smm-logo">Chan <span>Sensamnang</span></a>
+        <ul class="smm-nav-links">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Expertise</a></li>
+            <li><a href="#">Experience</a></li>
+        </ul>
+    </nav>
 
-        /* HERO LAYOUT GRIDS (NICEPAGE CONCEPT) */
-        .smm-hero-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 30px;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 50px;
-            align-items: center;
-        }
+    <section class="smm-hero-section">
+        <div class="hero-left-block">
+            <span class="agency-badge">IT Manager & Senior Consultant</span>
+            <h1 class="hero-title">Chan <span>Sensamnang</span></h1>
+            <p class="executive-summary">
+                A visionary IT Executive and Senior Academic Consultant with over 15 years of proven expertise in enterprise-grade Network Infrastructure, Advanced Firewall Architecture, and Information Security Systems. Currently serving as IT Manager, specializing in high-performance network designs, custom MikroTik RouterOS filtering optimizations, and comprehensive cybersecurity frameworks. Concurrently, an accomplished IT Lecturer holding a Master’s Degree in Information Technology, dedicated to cultivating next-generation computing talents.
+            </p>
+        </div>
 
-        /* LEFT AREA: STRATEGIC HEADINGS */
-        .hero-left-block {
-            padding-right: 10px;
-        }
+        <div class="hero-right-block">
+            <div class="smm-photo-frame">
+                <div class="image-wrapper">
+                    <!-- 💡 លីងភ្ជាប់ទៅកាន់រូបថតរបស់លោកគ្រូក្នុង GitHub ធានាដើរ ១០០% -->
+                    <img src="profile.PNG" alt="Chan Sensamnang Profile">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .agency-badge {
-            display: inline-block;
-            background-color: #fef3c7;
-            color: #d97706;
-            padding: 6px 16px;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
+    <section class="competencies-section">
+        <div class="inner-wrapper">
+            <h2 class="section-title">Technical Core Competencies</h2>
+            <div class="competencies-grid">
+                <div class="smm-card">
+                    <h4>Network Security</h4>
+                    <p>Advanced engineering of stateful firewall structures, custom MikroTik RouterOS rules optimization using FastTrack mechanics to minimize CPU loads, and bandwidth shaping via complex Queue hierarchies.</p>
+                </div>
+                <div class="smm-card">
+                    <h4>Cybersecurity</h4>
+                    <p>Comprehensive cyber threat mitigation, network traffic vulnerability assessments, localized security logging analysis, and strategic development of anti-ransomware backup systems.</p>
+                </div>
+                <div class="smm-card">
+                    <h4>Traffic Governance</h4>
+                    <p>Expert control over internal Access Control Lists (ACLs), deployment of deep packet inspection constraints, local area network segmentations, and structural web filtering paradigms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        .hero-title {
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.15;
-            color: var(--smm-blue);
-            margin-bottom: 25px;
-            letter-spacing: -1px;
-        }
+    <section class="timeline-section">
+        <div class="timeline-column">
+            <h3>Professional Experience</h3>
+            <div class="timeline-item">
+                <div class="item-date">2024 - PRESENT</div>
+                <div class="item-title">IT Manager</div>
+                <div class="item-sub">Enterprise Network Leadership</div>
+                <div class="item-desc">Directing corporate technical workflows, governing enterprise network infrastructure stability, ensuring data sovereignty across multi-campus layouts, and formulating cybersecurity operations.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="item-date">2010 - PRESENT</div>
+                <div class="item-title">Senior IT Lecturer</div>
+                <div class="item-sub">Higher Education Academic University</div>
+                <div class="item-desc">Lecturing and instructing university students on Computer Networks, Cybersecurity paradigms, Layer 2/3 Routing Protocols, and active production-ready WinBox firewalls configuration setups.</div>
+            </div>
+        </div>
 
-        .hero-title span {
-            color: var(--smm-amber);
-        }
+        <div class="timeline-column">
+            <h3>Education Background</h3>
+            <div class="timeline-item">
+                <div class="item-date">M.Sc. IT Graduate</div>
+                <div class="item-title">Master of Science</div>
+                <div class="item-sub">Information Technology Major</div>
+                <div class="item-desc">Advanced graduate specialization focusing on Enterprise Systems Architecture, Advanced Computing Science, and System Network Security Frameworks.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="item-date">B.Sc. IT Graduate</div>
+                <div class="item-title">Bachelor of Science</div>
+                <div class="item-sub">Information Technology Major</div>
+                <div class="item-desc">Undergraduate degree specializing in Computer Networking Systems, Database Management Architecture, and Systems Engineering.</div>
+            </div>
+        </div>
+    </section>
 
-        .executive-summary {
-            font-size: 1.05rem;
-            color: var(--text-muted);
-            margin-bottom: 35px;
-            text-align: justify;
-            font-weight: 400;
-            line-height: 1.7;
-        }
+    <div class="smm-cta-wrap">
+        <a href="https://t.me" class="btn-smm-tg" target="_blank">Connect on Telegram</a>
+    </div>
 
-        /* RIGHT AREA: BALANCED PREMIUM IMAGE PROFILE FRAME */
-        .hero-right-block {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .smm-photo-frame {
-            width: 100%;
-            max-width: 360px; /* Constrained for perfect UX proportion */
-            background-color: #ffffff;
-            border-radius: 16px;
-            padding: 12px;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-            border: 1px solid #f1f5f9;
-            position: relative;
-        }
-
-        .smm-photo-frame::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            width: 100px;
-            height: 100px;
-            background-color: #fde68a;
-            border-radius: 12px;
-            z-index: -1;
-        }
-
-        .image-wrapper {
-            width: 100%;
-            aspect-ratio: 1 / 1; /* Retains clean square format */
-            border-radius: 10px;
-            overflow: hidden;
-            background-color: var(--smm-gray);
-        }
-
-        .image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* MODULAR CORE COMPETENCIES GRID */
-        .competencies-section {
-            background-color: var(--smm-gray);
-            padding: 70px 0;
-            margin-top: 40px;
-        }
-
-        .inner-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: var(--smm-blue);
-            margin-bottom: 35px;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .smm-card {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
-            border: 1px solid #edf2f7;
-            transition: transform 0.25s ease;
-        }
-
-        .smm-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #eff6ff;
-            color: var(--smm-blue);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
-
-        .smm-card h4 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-        }
-
-        .smm-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            text-align: justify;
-        }
-
-        /* CHRONOLOGICAL EXPERIENCE AREA */
-        .timeline-section {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .timeline-column h3 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--smm-blue);
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .timeline-item {
-            background-color: #ffffff;
-            padding: 24px;
-            border-radius: 8px;
-            border-left: 4px solid var(--smm-amber);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-            margin-bottom: 20px;
-            border: 1px solid #f1f5f9;
-            border-left-width: 4px;
-        }
-
-        .item-date {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--smm-amber);
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        .item-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .item-sub {
-            font-size: 0.9rem;
-            color: var(--smm-blue);
+    <footer>
+        &copy; 2026 Chan Sensamnang | Executive Agency Style Portfolio. All rights reserved.
