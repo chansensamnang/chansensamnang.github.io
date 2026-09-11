@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chan Sensamnang | IT Manager & Senior IT Lecturer - Professional Portfolio</title>
-    
-    <!-- === GOOGLE SEO METADATA === -->
-    <meta name="description" content="Professional Executive Portfolio of Chan Sensamnang, currently serving as IT Manager and Senior IT Lecturer with over 15 years of expert experience in Enterprise Network Infrastructure, Firewall Security Architecture, and Cybersecurity frameworks.">
-    <meta name="keywords" content="Chan Sensamnang, ចាន់ សែនសំណាង, IT Manager, IT Lecturer, Bachelor in IT, Master in IT, MikroTik RouterOS, Network Security, Cybersecurity, Cambodia, IT Expert since 2010">
-    <meta name="author" content="Chan Sensamnang">
-
-    <!-- Open Graph / Social Media Share Tags -->
-    <meta property="og:title" content="Chan Sensamnang | IT Manager & Senior IT Lecturer">
-    <meta property="og:description" content="Official executive profile of Chan Sensamnang, IT Manager & Senior IT Lecturer. Expert in Network Infrastructure & Cybersecurity.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://chansensamnang.github.io">
-
+    <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
     <style>
         :root {
             --mindset-black: #111111;
@@ -24,320 +12,111 @@
             --text-white: #ffffff;
             --text-muted: #a3a3a3;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--mindset-black); color: var(--text-white); line-height: 1.6; }
+        
+        .mindset-navbar { background-color: var(--mindset-black); padding: 25px 8%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 100; }
+        .mindset-logo { font-size: 1.4rem; font-weight: 800; color: var(--text-white); letter-spacing: 2px; text-decoration: none; text-transform: uppercase; }
+        .mindset-logo span { color: var(--mindset-gold); }
+        .nav-cta-btn { background-color: var(--mindset-gold); color: var(--mindset-black); padding: 10px 24px; border-radius: 4px; font-weight: 700; text-decoration: none; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--mindset-black);
-            color: var(--text-white);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+        .mindset-hero { max-width: 1200px; margin: 60px auto; padding: 0 40px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: center; }
+        .hero-left { padding-right: 10px; }
+        .mindset-tagline { color: var(--mindset-gold); font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 15px; }
+        .mindset-heading { font-size: 3.5rem; font-weight: 900; line-height: 1.1; text-transform: uppercase; margin-bottom: 30px; letter-spacing: -1px; }
+        .mindset-heading span { color: var(--mindset-gold); }
+        .bio-box-kh { font-size: 1.05rem; color: var(--text-white); margin-bottom: 25px; text-align: justify; line-height: 1.8; }
+        .bio-box-en { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 40px; text-align: justify; font-weight: 400; line-height: 1.7; border-left: 3px solid var(--mindset-gold); padding-left: 15px; }
 
-        /* 1. TOP NAVIGATION BAR */
-        .mindset-navbar {
-            background-color: var(--mindset-black);
-            padding: 25px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        .hero-right { display: flex; justify-content: center; }
+        .photo-container { width: 100%; max-width: 340px; background-color: var(--mindset-dark); border: 1px solid rgba(255, 255, 255, 0.08); padding: 15px; box-shadow: 0 30px 60px rgba(0,0,0,0.6); position: relative; }
+        .photo-container::after { content: ''; position: absolute; bottom: -15px; left: -15px; width: 100%; height: 100%; border: 2px solid var(--mindset-gold); z-index: -1; }
+        .photo-box { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background-color: #000000; border-radius: 4px; }
+        .photo-box img { width: 100%; height: 100%; object-fit: cover; }
 
-        .mindset-logo {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--text-white);
-            letter-spacing: 2px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
+        .competence-section { background-color: var(--mindset-dark); padding: 80px 0; margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        .section-heading-block { margin-bottom: 50px; }
+        .section-title-kh { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.5px; }
+        .section-title-en { font-size: 1.1rem; color: var(--mindset-gold); margin-top: 5px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+        .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .mindset-card { background-color: var(--mindset-black); padding: 35px; border: 1px solid rgba(255, 255, 255, 0.03); }
+        .mindset-card:hover { border-color: var(--mindset-gold); }
+        .card-num { font-size: 1.5rem; font-weight: 900; color: var(--mindset-gold); margin-bottom: 20px; font-family: monospace; }
+        .card-head-kh { font-size: 1.2rem; font-weight: 800; margin-bottom: 5px; color: var(--text-white); }
+        .card-head-en { font-size: 1rem; color: var(--mindset-gold); margin-bottom: 15px; text-transform: uppercase; font-weight: 700; }
+        .card-p-kh { font-size: 0.95rem; color: #ffffff; text-align: justify; margin-bottom: 10px; line-height: 1.6; }
+        .card-p-en { font-size: 0.9rem; color: var(--text-muted); text-align: justify; line-height: 1.6; }
 
-        .mindset-logo span {
-            color: var(--mindset-gold);
-        }
+        .resume-section { max-width: 1200px; margin: 80px auto; padding: 0 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+        .resume-column-title { font-size: 1.8rem; font-weight: 900; text-transform: uppercase; margin-bottom: 35px; border-bottom: 2px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px; }
+        .resume-item { margin-bottom: 35px; position: relative; border-left: 2px solid var(--mindset-gold); padding-left: 20px; }
+        .date-badge { font-size: 0.85rem; font-weight: 700; color: var(--mindset-gold); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+        .item-main-title { font-size: 1.2rem; font-weight: 800; }
+        .item-sub-title { font-size: 0.95rem; color: var(--mindset-gold); margin-bottom: 12px; text-transform: uppercase; font-weight: 700; }
+        .item-p-kh { font-size: 0.95rem; color: #ffffff; text-align: justify; margin-bottom: 8px; line-height: 1.6; }
+        .item-p-en { font-size: 0.9rem; color: var(--text-muted); text-align: justify; line-height: 1.6; }
 
-        .nav-cta-btn {
-            background-color: var(--mindset-gold);
-            color: var(--mindset-black);
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: 700;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: background-color 0.2s ease;
-        }
+        footer { background-color: #000000; color: var(--text-muted); text-align: center; padding: 40px 20px; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.05); letter-spacing: 1px; }
+        @media (max-width: 1024px) { .mindset-navbar { padding: 20px; flex-direction: column; gap: 15px; } .mindset-hero { grid-template-columns: 1fr; text-align: center; margin: 30px auto; } .hero-left { padding-right: 0; } .bio-box-en, .bio-box-kh { text-align: center; } .bio-box-en { border-left: none; padding-left: 0; } .hero-right { grid-row: 1; } .cards-grid { grid-template-columns: 1fr; } .resume-section { grid-template-columns: 1fr; gap: 40px; } .mindset-heading { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
 
-        .nav-cta-btn:hover {
-            background-color: #d97706;
-        }
+    <div class="mindset-navbar">
+        <a href="#" class="mindset-logo">Chan <span>Sensamnang</span></a>
+        <a href="https://t.me" class="nav-cta-btn" target="_blank">Contact Me</a>
+    </div>
 
-        /* 2. TRANSFORM MINDSET HERO SECTION */
-        .mindset-hero {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
-        }
+    <div class="mindset-hero">
+        <div class="hero-left">
+            <div class="mindset-tagline">Transform your mindset</div>
+            <h1 class="mindset-heading">Chan <br><span>Sensamnang</span></h1>
+            
+            <div class="bio-box-kh">
+                ខ្ញុំបាទឈ្មោះ ចាន់ សែនសំណាង មានក្តីស្រឡាញ់ និងបទពិសោធន៍ក្នុងវិស័យហេដ្ឋារចនាសម្ព័ន្ធបច្ចេកវិទ្យា និងប្រព័ន្ធណេវើកតាំងពីឆ្នាំ ២០១០ មក។ ក្នុងរយៈពេលកន្លងមកនេះ ខ្ញុំបានពង្រឹងសមត្ថភាពបច្ចេកទេសលើការរៀបចំរចនាសម្ព័ន្ធប្រព័ន្ធបណ្តាញ គ្រប់គ្រងម៉ាស៊ីនមេ និងការដំឡើងប្រព័ន្ធការពារ Firewall (ជាពិសេស MikroTik WinBox) សម្រាប់សហគ្រាស និងការគ្រប់គ្រងប្រព័ន្ធសុវត្ថិភាព Cybersecurity។
+            </div>
+            
+            <div class="bio-box-en">
+                My name is Chan Sensamnang, and I have been deeply passionate about information technology infrastructure and computer networks since 2010. Over the years, I have honed my expert technical capabilities in architecture planning, complex router administration, and stateful WinBox firewall optimizations, specializing in enterprise-grade Network Infrastructure and localized Cybersecurity management.
+            </div>
+        </div>
 
-        .hero-left {
-            padding-right: 10px;
-        }
+        <div class="hero-right">
+            <div class="photo-container">
+                <div class="photo-box">
+                    <img src="profile.PNG" alt="Chan Sensamnang Presentation Profile">
+                </div>
+            </div>
+        </div>
+    </div>
 
-        .mindset-tagline {
-            color: var(--mindset-gold);
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-        }
+    <div class="competence-section">
+        <div class="wrapper">
+            <div class="section-heading-block">
+                <h2 class="section-title-kh">ជំនាញឯកទេសបច្ចេកទេសគន្លឹះ</h2>
+                <div class="section-title-en">Technical Core Competencies</div>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="mindset-card">
+                    <div class="card-num">01</div>
+                    <div class="card-head-kh">សុវត្ថិភាពប្រព័ន្ធបណ្តាញ</div>
+                    <div class="card-head-en">Network Security</div>
+                    <div class="card-p-kh">ជំនាញកម្រិតខ្ពស់លើការកំណត់ច្បាប់ Firewall Filter Rules, ប្រើប្រាស់យន្តការ FastTrack ដើម្បីកាត់បន្ថយបន្ទុក CPU របស់ Router និងពង្រឹងល្បឿនអ៊ីនធឺណិត។</div>
+                    <div class="card-p-en">Advanced engineering of stateful firewall structures, custom MikroTik RouterOS rules optimization using FastTrack mechanics to minimize CPU loads.</div>
+                </div>
 
-        .mindset-heading {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            letter-spacing: -1px;
-        }
+                <div class="mindset-card">
+                    <div class="card-num">02</div>
+                    <div class="card-head-kh">សុវត្ថិភាពឌីជីថល</div>
+                    <div class="card-head-en">Cybersecurity</div>
+                    <div class="card-p-kh">ការវាយតម្លៃនិងទប់ស្កាត់ការវាយប្រហារលើប្រព័ន្ធបណ្តាញ (Threat Mitigation) ការធ្វើសវនកម្មប្រព័ន្ធ និងការរៀបចំប្រព័ន្ធការពារទិន្នន័យសាជីវកម្ម (Secure Backups)។</div>
+                    <div class="card-p-en">Comprehensive cyber threat mitigation, network traffic vulnerability assessments, and strategic deployment of automated anti-ransomware backup systems.</div>
+                </div>
 
-        .mindset-heading span {
-            color: var(--mindset-gold);
-        }
-
-        .bio-box-kh {
-            font-size: 1.05rem;
-            color: var(--text-white);
-            margin-bottom: 25px;
-            text-align: justify;
-            line-height: 1.8;
-        }
-
-        .bio-box-en {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            text-align: justify;
-            font-weight: 400;
-            line-height: 1.7;
-            border-left: 3px solid var(--mindset-gold);
-            padding-left: 15px;
-        }
-
-        /* PHOTO FRAME UI */
-        .hero-right {
-            display: flex;
-            justify-content: center;
-        }
-
-        .photo-container {
-            width: 100%;
-            max-width: 340px;
-            background-color: var(--mindset-dark);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 15px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-            position: relative;
-        }
-
-        .photo-container::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: -15px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--mindset-gold);
-            z-index: -1;
-        }
-
-        .photo-box {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            overflow: hidden;
-            background-color: #000000;
-            border-radius: 4px;
-        }
-
-        .photo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* 3. CORE EXPERTISE CARDS GRID */
-        .competence-section {
-            background-color: var(--mindset-dark);
-            padding: 80px 0;
-            margin-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .section-heading-block {
-            margin-bottom: 50px;
-        }
-
-        .section-title-kh {
-            font-size: 2.2rem;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-        }
-
-        .section-title-en {
-            font-size: 1.1rem;
-            color: var(--mindset-gold);
-            margin-top: 5px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .mindset-card {
-            background-color: var(--mindset-black);
-            padding: 35px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .mindset-card:hover {
-            border-color: var(--mindset-gold);
-        }
-
-        .card-num {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--mindset-gold);
-            margin-bottom: 20px;
-            font-family: monospace;
-        }
-
-        .card-head-kh {
-            font-size: 1.2rem;
-            font-weight: 800;
-            margin-bottom: 5px;
-            color: var(--text-white);
-        }
-
-        .card-head-en {
-            font-size: 1rem;
-            color: var(--mindset-gold);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .card-p-kh {
-            font-size: 0.95rem;
-            color: #ffffff;
-            text-align: justify;
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-
-        .card-p-en {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            text-align: justify;
-            line-height: 1.6;
-        }
-
-        /* 4. CHRONOLOGICAL DATA TIMELINE */
-        .resume-section {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 40px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-        }
-
-        .resume-column-title {
-            font-size: 1.8rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 35px;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 10px;
-        }
-
-        .resume-item {
-            margin-bottom: 35px;
-            position: relative;
-            border-left: 2px solid var(--mindset-gold);
-            padding-left: 20px;
-        }
-
-        .date-badge {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--mindset-gold);
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .item-main-title {
-            font-size: 1.2rem;
-            font-weight: 800;
-        }
-
-        .item-sub-title {
-            font-size: 0.95rem;
-            color: var(--mindset-gold);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .item-p-kh {
-            font-size: 0.95rem;
-            color: #ffffff;
-            text-align: justify;
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-
-        .item-p-en {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            text-align: justify;
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: #000000;
-            color: var(--text-muted);
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            letter-spacing: 1px;
-        }
-
-        /* RESPONSIVE LAYOUT SYSTEM */
-        @media (max-width: 1024px) {
-            .mindset-navbar { padding: 20px; flex-direction: column; gap: 15px; }
-            .mindset-hero { grid-template-columns: 1fr; text-align: center; margin: 30px auto; }
-            .hero-left { padding-right: 0; }
-            .bio-box-en, .bio-box-kh { text-align: center; }
+                <div class="mindset-card">
+                    <div class="card-num">03</div>
+                    <div class="card-head-kh">ការគ្រប់គ្រងលំហូរទិន្នន័យ</div>
+                    <div class="card-head-en">Traffic Governance</div>
+                    <div class="card-p-kh">គ្រប់គ្រងសិទ្ធិអនុញ្ញាតចូលប្រើប្រាស់ទិន្នន័យ (ACLs) ការបង្កើតប្រព័ន្ធ LAN Segmentations និងការបែងចែកល្បឿនអ៊ីនធឺណិតឱ្យមានតុល្យភាព (Queues Layout)។</div>
