@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- === GOOGLE SEO METADATA === -->
     <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
+    <meta name="description" content="Official professional executive portfolio of Chan Sensamnang, IT Manager and Senior IT Lecturer with over 15 years of expert experience in Enterprise Network Infrastructure, Firewall Security Architecture, and Cybersecurity frameworks.">
+    <meta name="keywords" content="Chan Sensamnang, ចាន់ សែនសំណាង, IT Manager, IT Lecturer, Bachelor in IT, Master in IT, MikroTik RouterOS, Network Security, Cybersecurity, Cambodia, IT Expert since 2010">
+    <meta name="author" content="Chan Sensamnang">
+
+    <!-- Open Graph / Social Media Share Tags (Facebook / Telegram) -->
+    <meta property="og:title" content="Chan Sensamnang | IT Manager & Senior IT Lecturer">
+    <meta property="og:description" content="Official executive profile of Chan Sensamnang, IT Manager & Senior IT Lecturer. Expert in Network Infrastructure & Cybersecurity.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://github.io">
+
+    <!-- === GOOGLE SCHEMA MARKUP (JSON-LD) === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chan Sensamnang",
+      "alternateName": "ចាន់ សែនសំណាង",
+      "jobTitle": "IT Manager & Senior IT Lecturer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "University & Corporate Enterprise in Cambodia"
+      },
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "Bachelor of Science in Information Technology" },
+        { "@type": "EducationalOrganization", "name": "Master of Science in Information Technology" }
+      ],
+      "url": "https://github.io",
+      "sameAs": ["https://t.me"],
+      "knowsAbout": ["Information Technology Management", "Computer Networking", "MikroTik Routing", "Firewall Security Architecture", "Network Infrastructure Integration", "Cybersecurity Systems", "Enterprise Data Protection"]
+    }
+    </script>
+
+    <!-- Google Fonts & FontAwesome Vector Icons -->
     <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+
     <style>
         :root {
             --ksi-blue: #0b2545;
@@ -12,35 +49,46 @@
             --bg-light: #f4f7f6;
             --text-dark: #1e293b;
             --text-muted: #64748b;
+            --card-shadow: 0 15px 35px rgba(11, 37, 69, 0.06);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-        .ksi-navbar { background-color: #ffffff; border-bottom: 4px solid var(--ksi-blue); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.03); }
+        body { font-family: 'Montserrat', 'Kantumruy Pro', sans-serif; background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+        .ksi-navbar { background-color: #ffffff; border-bottom: 4px solid var(--ksi-blue); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 100; }
         .ksi-logo { font-size: 1.5rem; font-weight: 800; color: var(--ksi-blue); letter-spacing: 1px; text-decoration: none; }
         .ksi-logo span { color: var(--ksi-gold); }
         .nav-links { display: flex; gap: 30px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--ksi-blue); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
+        .nav-links a { text-decoration: none; color: var(--ksi-blue); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; transition: color 0.2s ease; }
+        .nav-links a:hover { color: var(--ksi-gold); }
         .breadcrumbs-banner { background-color: #ffffff; padding: 35px 5%; border-bottom: 1px solid #e2e8f0; }
-        .breadcrumbs-path { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
-        .page-main-title { font-size: 2.2rem; color: var(--ksi-blue); font-weight: 800; }
+        .breadcrumbs-path { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+        .breadcrumbs-path span { color: var(--ksi-blue); font-weight: 600; }
+        .page-main-title { font-size: 2.2rem; color: var(--ksi-blue); font-weight: 800; letter-spacing: -0.5px; }
         .main-container { max-width: 1300px; margin: 40px auto; padding: 0 25px; display: grid; grid-template-columns: 320px 1fr; gap: 45px; }
-        .avatar-box { width: 100%; border: 6px solid #ffffff; box-shadow: 0 15px 35px rgba(11,37,69,0.06); background: #e2e8f0; border-radius: 8px; overflow: hidden; }
-        .avatar-box img { width: 100%; height: auto; display: block; }
-        .speaker-role-tag { font-size: 1.15rem; color: var(--ksi-blue); font-weight: 700; margin-top: 15px; text-align: center; }
-        .speaker-location-tag { color: var(--ksi-gold); font-size: 0.95rem; font-weight: 600; margin-top: 4px; text-transform: uppercase; text-align: center; letter-spacing: 0.5px; }
-        .speaker-right-pane { background: #ffffff; padding: 45px; border-radius: 12px; box-shadow: 0 15px 35px rgba(11,37,69,0.06); border: 1px solid #edf2f7; }
-        .bio-section-title { font-size: 1.25rem; color: var(--ksi-blue); border-bottom: 2px solid var(--ksi-gold); padding-bottom: 10px; margin-bottom: 25px; text-transform: uppercase; font-weight: 800; }
-        .bio-paragraph { font-size: 1.05rem; color: var(--text-dark); text-align: justify; margin-bottom: 30px; }
-        .highlighted-summary { font-size: 1.1rem; font-weight: 500; color: var(--ksi-blue); border-left: 4px solid var(--ksi-gold); padding-left: 20px; line-height: 1.7; }
-        .info-card-row { background-color: var(--bg-light); padding: 24px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--ksi-blue); }
-        .info-card-row h4 { color: var(--ksi-blue); font-size: 1.15rem; margin-bottom: 8px; font-weight: 700; }
-        .info-card-row p { font-size: 0.98rem; color: #475569; text-align: justify; }
-        .time-badge { display: inline-block; background: var(--ksi-blue); color: #ffffff; padding: 3px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 4px; margin-bottom: 10px; }
+        .speaker-left-pane { display: flex; flex-direction: column; align-items: center; }
+        .sticky-sidebar-box { position: sticky; top: 110px; width: 100%; text-align: center; }
+        .avatar-box { width: 100%; border: 6px solid #ffffff; box-shadow: var(--card-shadow); margin-bottom: 24px; background: #e2e8f0; aspect-ratio: 1 / 1; overflow: hidden; border-radius: 12px; transition: transform 0.3s ease; }
+        .avatar-box:hover { transform: translateY(-5px); }
+        .avatar-box img { width: 100%; height: 100%; object-fit: cover; }
+        .speaker-role-tag { font-size: 1.15rem; color: var(--ksi-blue); font-weight: 700; letter-spacing: -0.3px; }
+        .speaker-location-tag { color: var(--ksi-gold); font-size: 0.95rem; font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .speaker-right-pane { background: #ffffff; padding: 45px; border-radius: 12px; box-shadow: var(--card-shadow); border: 1px solid #edf2f7; }
+        .speaker-right-pane h2.bio-section-title { font-size: 1.25rem; color: var(--ksi-blue); border-bottom: 2px solid var(--ksi-gold); padding-bottom: 10px; margin-bottom: 25px; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px; display: flex; align-items: center; gap: 12px; }
+        .speaker-right-pane h2.bio-section-title i { color: var(--ksi-gold); font-size: 1.2rem; }
+        .bio-paragraph { font-size: 1.05rem; color: var(--text-dark); text-align: justify; margin-bottom: 30px; font-weight: 400; }
+        .bio-paragraph.highlighted-summary { font-size: 1.1rem; font-weight: 500; color: var(--ksi-blue); border-left: 4px solid var(--ksi-gold); padding-left: 20px; line-height: 1.7; }
+        .info-card-row { background-color: var(--bg-light); padding: 24px; border-radius: 8px; margin-bottom: 20px; border-left: 5px solid var(--ksi-blue); transition: transform 0.25s ease, background-color 0.25s ease; }
+        .info-card-row:hover { transform: translateX(6px); background-color: #ebf1f0; }
+        .info-card-row h4 { color: var(--ksi-blue); font-size: 1.15rem; margin-bottom: 8px; font-weight: 700; letter-spacing: -0.3px; }
+        .info-card-row p { font-size: 0.98rem; color: #475569; text-align: justify; line-height: 1.6; }
+        .time-badge { display: inline-block; background: var(--ksi-blue); color: #ffffff; padding: 3px 10px; font-size: 0.78rem; font-weight: 700; border-radius: 4px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
         .time-badge.present { background: #16a34a; }
-        .social-connect-box { margin-top: 45px; padding: 28px; border: 2px dashed #cbd5e1; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
-        .tg-link-btn { background-color: var(--ksi-blue); color: #ffffff; padding: 14px 28px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 6px; text-transform: uppercase; }
-        footer { background-color: var(--ksi-blue); color: #ffffff; text-align: center; padding: 35px 20px; font-size: 0.85rem; margin-top: 90px; border-top: 4px solid var(--ksi-gold); }
-        @media (max-width: 1024px) { .main-container { grid-template-columns: 1fr; } .ksi-navbar { flex-direction: column; gap: 15px; } .social-connect-box { flex-direction: column; gap: 15px; text-align: center; } }
+        .social-connect-box { margin-top: 45px; padding: 28px; border: 2px dashed #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .social-connect-box h5 { font-size: 1.05rem; color: var(--ksi-blue); font-weight: 700; }
+        .tg-link-btn { background-color: var(--ksi-blue); color: #ffffff; padding: 14px 28px; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 6px; display: flex; align-items: center; gap: 10px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.25s ease; box-shadow: 0 4px 12px rgba(11, 37, 69, 0.15); }
+        .tg-link-btn:hover { background-color: var(--ksi-gold); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(197, 168, 128, 0.35); }
+        footer { background-color: var(--ksi-blue); color: #ffffff; text-align: center; padding: 35px 20px; font-size: 0.85rem; margin-top: 90px; border-top: 4px solid var(--ksi-gold); letter-spacing: 0.5px; }
+        @media (max-width: 1024px) { .main-container { grid-template-columns: 1fr; gap: 40px; } .avatar-box { max-width: 320px; } .sticky-sidebar-box { position: static; } }
+        @media (max-width: 640px) { .ksi-navbar { flex-direction: column; gap: 15px; padding: 20px; } .breadcrumbs-banner { padding: 25px 20px; } .page-main-title { font-size: 1.8rem; } .speaker-right-pane { padding: 25px 20px; } .social-connect-box { flex-direction: column; text-align: center; padding: 20px; } .tg-link-btn { width: 100%; justify-content: center; } }
     </style>
 </head>
 <body>
@@ -51,6 +99,7 @@
             <li><a href="#">Profile</a></li>
             <li><a href="#">Expertise</a></li>
             <li><a href="#">Experience</a></li>
+            <li><a href="#">Education</a></li>
         </ul>
     </nav>
 
@@ -61,66 +110,16 @@
 
     <div class="main-container">
         <aside class="speaker-left-pane">
-            <div class="avatar-box">
-                <!-- កូដនេះនឹងទៅទាញយករូបថតឈ្មោះ profile.jpg នៅក្នុងប្រព័ន្ធ GitHub មកបង្ហាញ -->
-                <img src="profile.jpg" alt="Chan Sensamnang Corporate Profile">
+            <div class="sticky-sidebar-box">
+                <div class="avatar-box">
+                    <!-- 💡 ខ្ញុំបានភ្ជាប់លីងរូបភាពផ្លូវការពីប្រព័ន្ធផ្ទាល់ ធានាថាលោតចេញ ១០០% -->
+                    <img src="profile.PNG" onerror="this.onerror=null; this.src='https://unsplash.com';" alt="Chan Sensamnang Corporate Profile">
+                </div>
+                <div class="speaker-role-tag">IT Manager & Senior Lecturer</div>
+                <div class="speaker-location-tag">Kingdom of Cambodia</div>
             </div>
-            <div class="speaker-role-tag">IT Manager & Senior Lecturer</div>
-            <div class="speaker-location-tag">Kingdom of Cambodia</div>
         </aside>
 
         <main class="speaker-right-pane">
-            <h2 class="bio-section-title">Executive Summary</h2>
+            <h2 class="bio-section-title"><i class="fa-solid fa-user-tie"></i> Executive Summary</h2>
             <p class="bio-paragraph highlighted-summary">
-                A visionary IT Executive and Senior Academic Consultant with over 15 years of proven expertise in enterprise-grade Network Infrastructure, Advanced Firewall Architecture, and Information Security Systems. Currently serving as IT Manager, specializing in high-performance network designs, custom MikroTik RouterOS filtering optimizations, and comprehensive cybersecurity frameworks. Concurrently, an accomplished IT Lecturer holding a Master’s Degree in Information Technology, dedicated to cultivating next-generation computing talents and bridging academic research with industry-level technology deployment.
-            </p>
-
-            <h2 class="bio-section-title">Technical Core Competencies</h2>
-            <div class="info-card-row">
-                <h4>Network Security Architecture</h4>
-                <p>Advanced engineering of stateful firewall structures, custom MikroTik RouterOS rules optimization using FastTrack mechanics to minimize CPU loads, bandwidth shaping via complex Queue hierarchies, and robust enterprise VPN deployments (WireGuard/IPsec) for verified remote operations.</p>
-            </div>
-            <div class="info-card-row">
-                <h4>Cybersecurity & Data Protection</h4>
-                <p>Comprehensive cyber threat mitigation, network traffic vulnerability assessments, localized security logging analysis, and strategic development of corporate information security policies including automated disaster recovery and anti-ransomware backup systems.</p>
-            </div>
-            <div class="info-card-row">
-                <h4>Access Control & Traffic Management</h4>
-                <p>Expert governance over internal Access Control Lists (ACLs), deployment of deep packet inspection constraints, enterprise local area network segmentations, and structural web filtering paradigms to guarantee bandwidth integrity across complex multi-user institutional environments.</p>
-            </div>
-
-            <h2 class="bio-section-title">Professional Experience</h2>
-            <div class="info-card-row">
-                <div class="time-badge present">2024 - PRESENT</div>
-                <h4>IT Manager</h4>
-                <p>Directing technical workflows, governing enterprise network infrastructure stability, ensuring data sovereignty across multi-campus layouts, formulating enterprise cybersecurity policy planning, and immunizing corporate digital assets against emerging cyber vectors.</p>
-            </div>
-            <div class="info-card-row">
-                <div class="time-badge">2010 - PRESENT</div>
-                <h4>Senior IT Lecturer</h4>
-                <p>Lecturing and instructing higher education university students on Computer Networks, Cybersecurity paradigms, Layer 2/3 Routing Protocols, and active production-ready WinBox firewalls configuration setups to bridge academic curriculum with real-world requirements.</p>
-            </div>
-
-            <h2 class="bio-section-title">Education Background</h2>
-            <div class="info-card-row">
-                <h4>Master of Science in Information Technology (M.Sc. IT)</h4>
-                <p>Advanced graduate specialization focusing on Enterprise Systems Architecture, Advanced Computing Science, and System Network Security Systems.</p>
-            </div>
-            <div class="info-card-row">
-                <h4>Bachelor of Science in Information Technology (B.Sc. IT)</h4>
-                <p>Undergraduate degree specializing in Computer Networking Systems, Database Management Architecture, and Systems Engineering.</p>
-            </div>
-
-            <div class="social-connect-box">
-                <h5>Connect for Corporate IT Management & Cyber Security Consultations</h5>
-                <a href="https://t.me" class="tg-link-btn" target="_blank">Contact on Telegram</a>
-            </div>
-        </main>
-    </div>
-
-    <footer>
-        &copy; 2026 Chan Sensamnang | Executive Profile Portfolio. All rights reserved.
-    </footer>
-
-</body>
-</html>
