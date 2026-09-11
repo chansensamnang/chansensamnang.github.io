@@ -5,313 +5,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chan Sensamnang | IT Manager & Senior IT Lecturer</title>
     
-    <!-- Google Fonts & FontAwesome -->
+    <!-- Google Fonts & FontAwesome Icons -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
 
     <style>
         :root {
             --studio-black: #111111;
-            --studio-orange: #d97706; /* Nicepage Accent Orange */
+            --studio-orange: #e65c00; /* Nicepage Premium Branding Orange Accent */
             --studio-light: #f8fafc;
             --text-light: #ffffff;
             --text-dark: #1e293b;
+            --font-title: 'Oswald', sans-serif;
+            --font-body: 'Poppins', 'Kantumruy Pro', sans-serif;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Poppins', 'Kantumruy Pro', sans-serif;
+            font-family: var(--font-body);
             background-color: var(--studio-black);
             color: var(--text-light);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        /* NICEPAGE LAYOUT CONTAINER */
-        .studio-section {
+        /* 1. NICEPAGE CREATIVE STUDIO SECTION CONTAINER */
+        .studio-container {
             min-height: 100vh;
-            padding: 80px 10%;
+            padding: 100px 8%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
         }
 
-        /* BACKGROUND DECORATIVE LAYERED SHAPES */
-        .shape-orange-block {
+        /* NICEPAGE ASYMMETRIC BACKGROUND BLOCK SHAPE */
+        .orange-background-block {
             position: absolute;
-            top: 10%;
-            right: 5%;
-            width: 35%;
-            height: 75vh;
+            top: 12%;
+            right: 6%;
+            width: 32%;
+            height: 72vh;
             background-color: var(--studio-orange);
             z-index: 1;
             border-radius: 4px;
         }
 
-        .main-grid {
+        /* 2. THE MAIN RESPONSIVE UX CONTENT GRID */
+        .studio-grid {
             width: 100%;
             max-width: 1200px;
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
             position: relative;
             z-index: 2;
             align-items: center;
         }
 
-        /* LEFT BLOCK: TEXT INFRASTRUCTURE */
-        .text-content-block {
-            padding-right: 20px;
+        /* LEFT AREA: TEXTUAL PORTFOLIO INFRASTRUCTURE */
+        .left-content-area {
+            padding-right: 15px;
         }
 
-        .studio-tagline {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
+        .studio-overline-tag {
+            font-family: var(--font-title);
+            font-size: 1.25rem;
             color: var(--studio-orange);
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
-        .studio-main-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: 3.8rem;
+        .studio-headline {
+            font-family: var(--font-title);
+            font-size: 4rem;
             line-height: 1.1;
             text-transform: uppercase;
             font-weight: 700;
-            margin-bottom: 25px;
-            color: var(--text-light);
+            margin-bottom: 30px;
+            letter-spacing: -1px;
         }
 
-        .studio-main-title span {
+        /* Nicepage Translucent Outline Typography Effect */
+        .studio-headline span {
             display: block;
             color: transparent;
-            -webkit-text-stroke: 1px #ffffff;
+            -webkit-text-stroke: 1.5px #ffffff;
         }
 
-        .executive-summary-box {
+        .summary-bio-paragraph {
             font-size: 1.1rem;
-            line-height: 1.7;
+            line-height: 1.75;
             color: #cbd5e1;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
             text-align: justify;
         }
 
-        /* COMPETENCIES CARDS ROWS */
-        .competency-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 24px;
-            margin-bottom: 20px;
+        /* MODULAR CORE COMPETENCIES CARDS LAYOUT */
+        .studio-skill-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 26px;
+            margin-bottom: 22px;
             border-radius: 6px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background 0.3s ease;
         }
 
-        .competency-box:hover {
-            transform: translateX(8px);
+        .studio-skill-card:hover {
+            transform: translateX(10px);
             background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(230, 92, 0, 0.3);
         }
 
-        .competency-box h4 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.3rem;
+        .studio-skill-card h4 {
+            font-family: var(--font-title);
+            font-size: 1.35rem;
             color: var(--studio-orange);
             text-transform: uppercase;
             margin-bottom: 8px;
             letter-spacing: 1px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .competency-box p {
+        .studio-skill-card p {
+            font-size: 0.98rem;
+            color: #94a3b8;
+            text-align: justify;
+        }
+
+        /* RIGHT AREA: THE SIGNATURE POLAROID LAYERED IMAGE FRAME */
+        .right-image-area {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .polaroid-frame-layer {
+            width: 100%;
+            max-width: 410px;
+            background: #ffffff;
+            padding: 18px 18px 28px 18px;
+            box-shadow: 0 35px 70px rgba(0,0,0,0.5);
+            transform: rotate(2.5deg);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 4px;
+        }
+
+        .polaroid-frame-layer:hover {
+            transform: rotate(0deg) scale(1.03);
+        }
+
+        .photo-canvas {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background-color: #e2e8f0;
+            border-radius: 2px;
+            margin-bottom: 22px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .photo-canvas img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo-caption-block {
+            text-align: center;
+            padding-top: 4px;
+        }
+
+        .photo-caption-block h3 {
+            font-family: var(--font-title);
+            font-size: 1.65rem;
+            color: var(--studio-black);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .photo-caption-block p {
+            font-size: 0.95rem;
+            color: var(--studio-orange);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 3px;
+        }
+
+        /* 3. EXPERIENCE AND EDUCATION STRUCTURAL TIMELINE GIRD */
+        .dual-timeline-grid {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 70px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 50px;
+        }
+
+        .timeline-column h3 {
+            font-family: var(--font-title);
+            font-size: 1.9rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .timeline-column h3 i {
+            color: var(--studio-orange);
+        }
+
+        .timeline-node-card {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 24px;
+            border-left: 3px solid var(--studio-orange);
+        }
+
+        .node-card-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .node-card-date {
+            font-size: 0.95rem;
+            color: var(--studio-orange);
+            font-weight: 600;
+            margin: 4px 0 8px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .node-card-details {
             font-size: 0.95rem;
             color: #94a3b8;
             text-align: justify;
             line-height: 1.6;
         }
 
-        /* RIGHT BLOCK: PREMIUM LAYERED IMAGE */
-        .image-content-block {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .layered-card-frame {
-            width: 100%;
-            max-width: 420px;
-            background: #ffffff;
-            padding: 16px 16px 24px 16px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-            transform: rotate(2deg);
-            transition: transform 0.4s ease;
-            border-radius: 4px;
-        }
-
-        .layered-card-frame:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-
-        .inner-photo-wrap {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            overflow: hidden;
-            background-color: #cbd5e1;
-            border-radius: 2px;
-            margin-bottom: 20px;
-        }
-
-        .inner-photo-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card-profile-details {
-            text-align: center;
-            padding-top: 5px;
-        }
-
-        .card-profile-details h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.6rem;
-            color: var(--studio-black);
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .card-profile-details p {
-            font-size: 0.9rem;
-            color: var(--studio-orange);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 2px;
-        }
-
-        /* EXPERIENCE & EDUCATION MINIMALIST GRID */
-        .info-section-grid {
+        /* BRANDING STUDIO CALL TO ACTION COMPONENT */
+        .studio-action-center {
             grid-column: span 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 40px;
+            text-align: center;
+            margin-top: 35px;
         }
 
-        .info-column h3 {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem;
-            text-transform: uppercase;
-            margin-bottom: 25px;
-            color: #ffffff;
-            letter-spacing: 1px;
-        }
-
-        .info-item {
-            margin-bottom: 25px;
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid var(--studio-orange);
-        }
-
-        .info-item-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        .info-item-sub {
-            font-size: 0.95rem;
-            color: var(--studio-orange);
-            font-weight: 500;
-            margin: 2px 0 6px 0;
-        }
-
-        .info-item-desc {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            text-align: justify;
-        }
-
-        /* PREMIUM CTA BUTTON */
-        .studio-cta-wrap {
-            margin-top: 40px;
-        }
-
-        .btn-studio-tg {
+        .btn-studio-action {
             display: inline-flex;
             align-items: center;
             gap: 12px;
             background-color: transparent;
             color: #ffffff;
             border: 2px solid #ffffff;
-            padding: 14px 35px;
+            padding: 15px 40px;
             text-decoration: none;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1rem;
+            font-family: var(--font-title);
+            font-size: 1.05rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+            border-radius: 2px;
         }
 
-        .btn-studio-tg:hover {
+        .btn-studio-action:hover {
             background-color: var(--studio-orange);
             border-color: var(--studio-orange);
-            transform: translateY(-3px);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(230, 92, 0, 0.2);
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             font-size: 0.85rem;
-            color: #64748b;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            margin-top: 80px;
+            color: #475569;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            margin-top: 100px;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* RESPONSIVE LAYOUT MEDIA QUERIES (UX SYSTEM) */
-        @media (max-width: 1024px) {
-            .main-grid { grid-template-columns: 1fr; gap: 50px; }
-            .shape-orange-block { display: none; }
-            .image-content-block { grid-row: 1; }
-            .info-section-grid { grid-template-columns: 1fr; }
-            .studio-main-title { font-size: 3rem; }
+        /* === RESPONSIVE LAYOUT MATRIX (UX SYSTEM) === */
+        @media (max-width: 1100px) {
+            .studio-grid { grid-template-columns: 1fr; gap: 50px; }
+            .orange-background-block { display: none; }
+            .right-image-area { grid-row: 1; }
+            .dual-timeline-grid { grid-template-columns: 1fr; gap: 30px; }
+            .studio-headline { font-size: 3.2rem; }
+            .studio-container { padding: 60px 5%; }
         }
     </style>
 </head>
 <body>
 
-    <section class="studio-section">
-        <!-- Nicepage Layered Background block -->
-        <div class="shape-orange-block"></div>
+    <section class="studio-container">
+        <!-- Nicepage Block Shape Layer -->
+        <div class="orange-background-block"></div>
 
-        <div class="main-grid">
+        <div class="studio-grid">
             
-            <!-- Left Block: Text Infrastructure Data -->
-            <div class="text-content-block">
-                <div class="studio-tagline">About branding studio</div>
-                <h1 class="studio-main-title">Chan <span>Sensamnang</span></h1>
+            <!-- Left Block Content Frame -->
+            <div class="left-content-area">
+                <div class="studio-overline-tag">About branding studio</div>
+                <h1 class="studio-headline">Chan <span>Sensamnang</span></h1>
                 
-                <div class="executive-summary-box">
-                    A visionary IT Executive and Senior Academic Consultant with over 15 years of proven expertise in enterprise-grade Network Infrastructure, Advanced Firewall Architecture, and Information Security Systems. Currently serving as IT Manager, specializing in high-performance network designs, custom MikroTik RouterOS filtering optimizations, and comprehensive cybersecurity frameworks.
-                </div>
-
-                <!-- Technical Competencies Rows -->
-                <div class="competency-box">
-                    <h4><i class="fa-solid fa-shield-halved"></i> Network Security</h4>
-                    <p>Advanced engineering of stateful firewall structures, custom MikroTik RouterOS rules optimization using FastTrack mechanics to minimize CPU loads, and bandwidth shaping via complex Queue hierarchies.</p>
-                </div>
-
-                <div class="competency-box">
-                    <h4><i class="fa-solid fa-lock"></i> Cybersecurity</h4>
-                    <p>Comprehensive cyber threat mitigation, network traffic vulnerability assessments, localized security logging analysis, and strategic development of anti-ransomware backup systems.</p>
-                </div>
-            </div>
-
+                <p class="summary-bio-paragraph">
